@@ -1,0 +1,12 @@
+{
+    "data": {
+        "encrypt": {
+            "value": "",
+            "placeholder": "type something to encrypt using ceaser 3 encryption"
+        },
+        "decrypt": {
+            "value": "",
+            "placeholder": "paste something to decrypt using ceaser 3 encryption"
+        }
+    }
+}

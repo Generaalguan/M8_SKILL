@@ -1,0 +1,1 @@
+const app = new App(); //de app wordt aangeroepen

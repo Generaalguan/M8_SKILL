@@ -1,0 +1,81 @@
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 2rem;
+  height: 100vh;
+  font-family: sans-serif;
+  background: linear-gradient(to right, #00f260, #0575e6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.main {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 4rem;
+  gap: 2rem;
+  justify-content: center;
+}
+
+.view {
+  aspect-ratio: 1/1;
+  height: 80rem;
+  border: 0.25rem solid black;
+  border-radius: 15rem;
+  background: rgba(238, 238, 238, 0.35);
+  padding: 4rem;
+}
+.view__header {
+  width: 100%;
+  height: 20%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.view__heading {
+  font-size: 200%;
+  font-weight: 400;
+}
+.view__body {
+  width: 100%;
+  height: 60%;
+  padding-bottom: 2rem;
+}
+.view__input {
+  font-size: 100%;
+  width: 100%;
+  height: 100%;
+  resize: none;
+  font-family: inherit;
+  background: none;
+}
+.view__footer {
+  height: 20%;
+  width: 100%;
+}
+.view__button {
+  padding: 2rem 4rem;
+  font-size: 100%;
+  width: 25rem;
+  background-color: black;
+  color: white;
+  border-radius: 0.5rem;
+  transition: 0.8s all;
+}
+.view__button:hover {
+  cursor: pointer;
+  background-color: transparent;
+  color: black;
+}
+
+/*# sourceMappingURL=style.css.map */

@@ -5,44 +5,28 @@ class Footer {
     buttonHtmlElement;
     buttonText;
 
-    constructor(view, text) {
+    constructor(view, text) {//de footer krijgt view en text binnen,
         this.view = view;
-        this.HTMLelement = document.createElement("footer");
-        this.HTMLelement.classList = ("view__footer");
-        this.view.main.app.renderer.render(this.HTMLelement, view.HTMLelement);
+        this.HTMLelement = document.createElement("footer");//de htmlelement is de aangemaakte footer element, 
+        this.HTMLelement.classList = ("view__footer");//die krijgt de class view__footer binnen
+        this.view.main.app.renderer.render(this.HTMLelement, view.HTMLelement);//deze wordt gerenderd door renderer zijn render functie, deze htmlElement(footer) wordt gerenderd in view zijn htmlelement(main)
 
-        this.buttonText = text;
-        this.buttonHtmlElement = document.createElement("button");
-        this.buttonHtmlElement.classList = "view__button";
-        this.buttonHtmlElement.innerText = this.buttonText;
-        this.view.main.app.renderer.render(this.buttonHtmlElement, this.HTMLelement);
+        this.buttonText = text;//de buttontext is de inkomende text
+        this.buttonHtmlElement = document.createElement("button");//de buttonHtmlElement is de aangemaakte button element,
+        this.buttonHtmlElement.classList = "view__button";//die krijgt de class view__button,
+        this.buttonHtmlElement.innerText = this.buttonText;//de tekst die op het scherm komt is de buttontext
+        this.view.main.app.renderer.render(this.buttonHtmlElement, this.HTMLelement);//de renderer zijn render functie wordt uitgevoer die zet de buttonHTMLElement(button) in deze htmlelement (footer) 
 
-        this.buttonHtmlElement.onclick = this.buttonClicked;
+        this.buttonHtmlElement.onclick = this.buttonClicked;//als deze buttonHTMLElment op geclickt is voer de functie buttonClicked uit
 
 
     }
 
-    buttonClicked = () => {
-        this.view.getDataFromBody();
+    buttonClicked = () => {//
+        this.view.getDataFromBody();//die voert de view zijn get data from body uit
     }
 
-/*
-de footer krijgt view en text binnen,
 
-de htmlelement is de aangemaakte footer element, 
-die krijgt de class view__footer binnen
-deze wordt gerenderd door renderer zijn render functie, deze htmlElement(footer) wordt gerenderd in view zijn htmlelement(main)
-
-de buttonHtmlElement is de aangemaakte button element,
-die krijgt de class view__button,
-de tekst die de buttonHTMLelement binnen krijgt is de text die je binnen krijgt
-de renderer zijn render functie wordt uitgevoer die zet de buttonHTMLElement(button) in deze htmlelement (footer) 
-
-als deze buttonHTMLElment op geclickt is voer de functie buttonClicked uit
-die voert de view zijn get data from body uit
-
-
-*/
 
 
 }

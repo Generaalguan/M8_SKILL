@@ -3,58 +3,38 @@ class Body {
     view;
     inputHTMLElement;
     text;
-    constructor(view, object) {
+    constructor(view, object) {//    de body krijgt view en een object binnen
         this.view = view;
 
-        this.HTMLelement = document.createElement("section");
-        this.HTMLelement.classList = ("view__body");
-        this.view.main.app.renderer.render(this.HTMLelement, view.HTMLelement)
+        this.HTMLelement = document.createElement("section");//    de HTMLElement is een section
+        this.HTMLelement.classList = ("view__body");//    die krijgt de class view__body 
+        this.view.main.app.renderer.render(this.HTMLelement, view.HTMLelement);//    de renderer zijn render functie wordt uitgevoerd die zet deze htmlelement in die van de view
 
-        this.inputHTMLElement = document.createElement("textarea");
-        this.inputHTMLElement.classList = "view__input";
-        this.inputHTMLElement.placeholder = object.placeholder;
-        this.inputHTMLElement.value = object.value;
-        this.text = object.value;
+        this.inputHTMLElement = document.createElement("textarea");//    de inputHTMLElement = een textarea
+        this.inputHTMLElement.classList = "view__input";//    met de class view__input
+        this.inputHTMLElement.placeholder = object.placeholder;//    de placeholder is de object zijn placeholder
+        this.inputHTMLElement.value = object.value;//    de value is de object zijn value
+        this.text = object.value;//    de tekst is de object zijn value
 
-        this.inputHTMLElement.oninput = this.typed;
+        this.inputHTMLElement.oninput = this.typed;//    de inputHTMLElement op input voert de typed functie uit
 
-        this.view.main.app.renderer.render(this.inputHTMLElement, this.HTMLelement)
+        this.view.main.app.renderer.render(this.inputHTMLElement, this.HTMLelement)//    de renderer zijn render functie wordt uitgevoerd die zet deze inputHTMLElement in de htmlelement
+
 
     }
 
-    typed = (event) => {
-        this.text = event.target.value;
+    typed = (event) => {//    de typed functie die krijgt een event binnen
+
+        this.text = event.target.value;//    deze tekst is de event zijn target value
+
     }
 
-    changeBody = (newText) => {
-        this.inputHTMLElement.value = newText;
+    changeBody = (newText) => {//    de changeBody functie krijgt een newTekxt binnen
+
+        this.inputHTMLElement.value = newText;//    de inputHTMLElement zijn value is de newTekst
+
     }
 
-    /*
-    de body krijgt view en een object binnen
-
-    de HTMLElement is een section
-    die krijgt de class view__body 
-    de renderer zijn render functie wordt uitgevoerd die zet deze htmlelement in die van de view
-
-    de inputHTMLElement = een textarea
-    met de class view__input
-    de placeholder is de object zijn placeholder
-    de value is de object zijn value
-    de tekst is de object zijn value
-
-    de inputHTMLElement op input voert de typed functie uit
-    de renderer zijn render functie wordt uitgevoerd die zet deze inputHTMLElement in de htmlelement
-
-    de typed functie die krijgt een event binnen
-    deze tekst is de event zijn target value
-
-    de changeBody functie krijgt een newTekxt binnen
-    de inputHTMLElement zijn value is de newTekst
-
-    
-    
-    */
 
 
 }

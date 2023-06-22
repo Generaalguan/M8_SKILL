@@ -1,0 +1,15 @@
+@use "./colors.scss";
+
+@mixin scroll_bar{
+    &::-webkit-scrollbar {
+        width: 0.5rem;
+    }
+    
+
+    
+    &::-webkit-scrollbar-thumb {
+        background-color: colors.$purple;
+        outline: 0.25rem solid black;
+        border-radius: 0.5rem;
+    }
+}

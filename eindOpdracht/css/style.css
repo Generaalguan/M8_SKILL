@@ -1,0 +1,236 @@
+*,
+*::after,
+*::before {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  height: 100vh;
+  width: 100%;
+  background: radial-gradient(#8e2de2 30%, #4a00e0);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: black;
+}
+
+.yubtub {
+  width: 80%;
+  height: 90vh;
+  box-shadow: 2rem 2rem 3rem 0 black;
+  background: #635985;
+}
+.yubtub__wrapper {
+  display: flex;
+  flex-direction: row;
+  height: 100%;
+  width: 100%;
+}
+
+.header {
+  width: 100%;
+  height: 20%;
+  background: white;
+}
+
+.main {
+  height: 100%;
+  width: 70%;
+  padding: 2rem;
+}
+.main__wrapper {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 2rem;
+  position: relative;
+}
+.main__video {
+  width: 100%;
+  aspect-ratio: 1/0.5;
+  border: none;
+}
+.main__article {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4rem;
+  flex-direction: row;
+}
+.main__title {
+  color: white;
+  font-size: 2.5rem;
+}
+.main__profile {
+  width: 5rem;
+  height: 5rem;
+  border-radius: 4rem;
+}
+.main__icons {
+  font-size: 400%;
+  color: white;
+}
+.main__icons:hover {
+  cursor: pointer;
+}
+.main__icons--top {
+  font-size: 400%;
+  color: white;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.main__icons--top:hover {
+  cursor: pointer;
+}
+.main__comments {
+  width: 70%;
+  max-height: 30%;
+  overflow-y: scroll;
+  list-style: none;
+  display: flex;
+  flex-direction: column-reverse;
+  gap: 0.5rem;
+  padding-right: 2rem;
+}
+.main__comments::-webkit-scrollbar {
+  width: 0.5rem;
+}
+.main__comments::-webkit-scrollbar-thumb {
+  background-color: #8e2de2;
+  outline: 0.25rem solid black;
+  border-radius: 0.5rem;
+}
+.main__comment {
+  width: 100%;
+  height: 3rem;
+  font-size: 2.6rem;
+  background: white;
+  padding-left: 1rem;
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: start;
+  gap: 1.5rem;
+}
+.main__comment__profile {
+  width: 3rem;
+  border-radius: 5rem;
+}
+.main__input {
+  width: 70%;
+  border: none;
+  padding: 1rem;
+}
+.main__button {
+  width: 30%;
+  border: none;
+  background: #8e2de2;
+  color: white;
+  padding: 1rem;
+}
+
+.aside {
+  width: 30%;
+  height: 100%;
+  padding: 2rem;
+}
+.aside__posters {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  list-style: none;
+  gap: 3rem;
+  overflow-y: scroll;
+  height: 100%;
+}
+.aside__posters::-webkit-scrollbar {
+  width: 0.5rem;
+}
+.aside__posters::-webkit-scrollbar-thumb {
+  background-color: #8e2de2;
+  outline: 0.25rem solid black;
+  border-radius: 0.5rem;
+}
+.aside__poster {
+  width: 90%;
+  cursor: pointer;
+  border: solid black 0.1rem;
+  list-style: none;
+}
+.aside__img {
+  max-width: 100%;
+}
+.aside__p {
+  font-weight: 400;
+  font-size: 2rem;
+  top: 10%;
+  left: 0;
+  color: white;
+}
+
+@media screen and (max-width: 56.25rem) {
+  body {
+    height: 100%;
+  }
+  .yubtub {
+    height: 100%;
+  }
+  .yubtub__wrapper {
+    flex-direction: column;
+  }
+  .main {
+    width: 100%;
+  }
+  .main__comments {
+    max-height: 20rem;
+    overflow-y: scroll;
+  }
+  .aside {
+    width: 100%;
+    overflow-y: scroll;
+  }
+  .aside__posters {
+    width: 100%;
+    flex-wrap: wrap;
+    flex-direction: row;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+  .aside__poster {
+    width: 45%;
+  }
+}
+@media screen and (max-width: 37.5rem) {
+  body {
+    height: 100%;
+  }
+  .yubtub {
+    width: 100%;
+    height: 100%;
+    overflow-y: hidden;
+  }
+  .main__title {
+    font-size: 1.5rem;
+  }
+  .main__icons {
+    font-size: 2.5rem;
+  }
+  .main__comments {
+    max-height: 20rem;
+    overflow-y: scroll;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */

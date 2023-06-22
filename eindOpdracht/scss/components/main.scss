@@ -1,0 +1,120 @@
+@use"../abstracts/colors.scss";
+@use "../abstracts/mixins.scss";
+
+.main{
+    height: 100%;
+    width: 70%;
+    padding: 2rem;
+
+    &__wrapper{
+        height: 100%;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        gap: 2rem;
+                position: relative;
+    }
+    
+    &__video{
+        width: 100%;
+        aspect-ratio: 1/0.5;
+        border: none;
+
+    }
+
+    &__article{
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 4rem;
+        flex-direction: row;
+    }
+
+    &__title{
+        color: white;
+        font-size: 2.5rem
+    }
+
+    &__profile{
+        width: 5rem;
+        height: 5rem;
+        border-radius: 4rem;
+    }
+
+    &__icons{
+
+        font-size: 400%;
+
+        color: white;
+
+        &:hover{
+
+            cursor: pointer;
+
+        }
+
+        &--top{
+            font-size: 400%;
+
+            color: white;
+    
+            &:hover{
+    
+                cursor: pointer;
+    
+            }
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+
+    }
+    &__comments{
+        width: 70%;
+        max-height: 30%;
+        overflow-y: scroll;
+        list-style: none;
+        display: flex;
+        flex-direction: column-reverse;
+        gap: 0.5rem;
+        padding-right: 2rem;
+
+        @include mixins.scroll_bar;
+
+    }
+
+    &__comment{
+        width: 100%;
+        height: 3rem;
+        font-size: 2.6rem;
+        background: white;
+        padding-left: 1rem;
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: start;
+        gap: 1.5rem;
+
+        &__profile{
+            width: 3rem;
+            border-radius: 5rem;
+        }
+
+    }
+
+    &__input{
+        width: 70%;
+        border: none;
+        padding: 1rem;
+    }
+
+    &__button{
+        width: 30%;
+        border: none;
+        background: colors.$purple;
+        color: white;
+        padding: 1rem;
+    }
+
+}
